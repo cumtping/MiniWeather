@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.peak.miniweather.launcher.DragLayer
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:Launcher="http://schemas.android.com/apk/res/com.peak.miniweather"
+        android:id="@+id/forcast_drag_layer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dip"
+        Launcher:defaultScreen="0"
+        android:background="@drawable/weather_bar1"
+        android:visibility="gone" >
+
+        <com.peak.miniweather.launcher.Workspace
+            android:id="@+id/forcast_workspace"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            Launcher:defaultScreen="0" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <include
+                    android:id="@+id/forcast1"
+                    layout="@layout/forcast_item_layout" />
+
+                <include
+                    android:id="@+id/forcast2"
+                    layout="@layout/forcast_item_layout" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <include
+                    android:id="@+id/forcast3"
+                    layout="@layout/forcast_item_layout" />
+
+                <include
+                    android:id="@+id/forcast4"
+                    layout="@layout/forcast_item_layout" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <include
+                    android:id="@+id/forcast5"
+                    layout="@layout/forcast_item_layout" />
+
+                <include
+                    android:id="@+id/forcast6"
+                    layout="@layout/forcast_item_layout" />
+            </LinearLayout>
+        </com.peak.miniweather.launcher.Workspace>
+    </com.peak.miniweather.launcher.DragLayer>
+
+</merge>

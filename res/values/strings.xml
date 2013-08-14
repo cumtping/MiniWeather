@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MiniWeather</string>
+    <string name="action_add">Add</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_settings">Settings</string>
+    <string name="no_network">NO NETWORK! PLEASE CHECK IT!</string>
+    <string name="default_city">北京 </string>
+    <string name="default_city2">南京 </string>
+    <string name="refresh_weather_info">Refreshing weather information...</string>
+    <string name="colon">:</string>
+    <string name="comma">、</string>
+    <string name="fuhao">~</string>
+    <string name="level">Level</string>
+    <string name="wind">Wind</string>
+    <string name="speed">Speed:</string>
+    <string name="humidity">Humid:</string>
+    <string name="meter_per_second">m/s</string>
+    <string name="dian">.</string>
+    <string name="henggang">-</string>
+    <string name="year">Y</string>
+    <string name="mouth">M</string>
+    <string name="day">D</string>
+    <string name="ceisius">℃</string>
+    <string name="dayOfWeek1">星期一</string>
+    <string name="dayOfWeek2">星期二</string>
+    <string name="dayOfWeek3">星期三</string>
+    <string name="dayOfWeek4">星期四</string>
+    <string name="dayOfWeek5">星期五</string>
+    <string name="dayOfWeek6">星期六</string>
+    <string name="dayOfWeek7">星期日</string>
+    <string name="sunny">晴</string>
+    <string name="mostly_sunny">以晴为主</string>
+    <string name="partly_sunny">晴间多云</string>
+    <string name="mostly_cloudy">大部多云</string>
+    <string name="cloudy">多云</string>
+    <string name="partly_cloudy">局部多云</string>
+    <string name="haze">雾霾</string>
+    <string name="smoke">烟雾</string>
+    <string name="overcast">阴</string>
+    <string name="light_snow">小雪</string>
+    <string name="snow">雪</string>
+    <string name="snow_two">中雪</string>
+    <string name="snow_showers">大雪</string>
+    <string name="snow_showers_two">暴雪</string>
+    <string name="sleet">雨夹雪</string>
+    <string name="thunder_storm">雷阵雨</string>
+    <string name="showers">阵雨</string>
+    <string name="light_rain">小雨</string>
+    <string name="chance_of_rain">可能有雨</string>
+    <string name="chance_of_storm">可能有暴风雨</string>
+    <string name="rain">雨</string>
+    <string name="moderate_rain">中雨</string>
+    <string name="ligth_to_moderate_rain">小到中雨</string>
+    <string name="pour">大雨</string>
+    <string name="moderate_rain_to_pour">大雨</string>
+    <string name="rain_storm">暴雨</string>
+    <string name="pour_to_rain_storm">大到暴雨</string>
+    <string name="fog">雾</string>
+    <string name="icy">冰冻</string>
+    <string name="dust">沙尘暴</string>
+    <string name="snow_storm">暴风雪</string>
+    <string name="choose_city_unsupport">WaOoo! I can\'t from the weather of the city you choose!</string>
+    <string name="no_city_notice">NO CITY SELECTED!\nCLICK TO ADD A CITY!</string>
+    <string name="waiting_for_weather_info">正在获取天气数据...</string>
+    <string name="auto_refresh">自动更新</string>
+    <string name="refresh_time">更新时间</string>
+    
+
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<drawable name="translucent_background">#60000000</drawable>
+    <drawable name="transparent_background">#00000000</drawable>
+    
+    <color name="window_background">#FF191919</color>
+    <color name="grid_dark_background">#EB191919</color>     
+    <color name="bubble_dark_background">#B2191919</color>
+    <color name="delete_color_filter">#A5FF0000</color>
+    <color name="fenye_on_click">#A5FF0000</color>
+    <color name="fenye_no_click">#ffffffff</color>
+    <color name="tm">#00000000</color>
+    <color name="cs">#fff3ec</color>
+    <color name="appwidget_error_color">#fccc</color>
+    <color name="red">#FFFF0000</color>
+</resources>

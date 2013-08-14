@@ -1,0 +1,12 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    -->
+    <dimen name="griditem_gap">30dp</dimen>
+    <dimen name="griditem_width">120dp</dimen>
+    <dimen name="paging_margin_bottom">10dp</dimen>
+    <dimen name="weather_margin_bottom">50dp</dimen>
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.peak.miniweather.launcher.DragLayer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Launcher="http://schemas.android.com/apk/res/com.peak.miniweather"
+    android:id="@+id/drag_layer"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    Launcher:defaultScreen="0" >
+
+    <com.peak.miniweather.launcher.Workspace
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/weather_margin_bottom"
+        Launcher:defaultScreen="0" >
+
+    </com.peak.miniweather.launcher.Workspace>
+
+    <LinearLayout
+        android:id="@+id/paging"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/paging_margin_bottom"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</com.peak.miniweather.launcher.DragLayer>

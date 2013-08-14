@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/waiting_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="100dip"
+        layout="@layout/waiting_layout"
+        android:gravity="center" />
+
+    <include
+        android:id="@+id/today_weather_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        android:layout_margin="5dip"
+        layout="@layout/today_weather_layout"
+        android:gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        layout="@layout/forcast_weather_layout"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>
