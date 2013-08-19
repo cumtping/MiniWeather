@@ -66,6 +66,9 @@
     <string name="waiting_for_weather_info">正在获取天气数据...</string>
     <string name="auto_refresh">自动更新</string>
     <string name="refresh_time">更新时间</string>
+    <string name="refresh_city">更新城市</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="choose_city_msg">请选择城市</string>
     
-
 </resources>

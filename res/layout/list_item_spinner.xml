@@ -23,7 +23,7 @@
         android:id="@+id/spinner_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dip"
+        android:padding="10dip"
         android:text="@string/refresh_time"
         android:textColor="@android:color/white"
         android:textSize="@dimen/large_text" />
@@ -31,7 +31,7 @@
     <ImageView
         android:id="@+id/drop_down_arrow"
         android:layout_width="40dip"
-        android:layout_height="48dip"
+        android:layout_height="68dip"
         android:layout_alignBottom="@id/spinner_text"
         android:layout_alignParentRight="true"
         android:layout_margin="10dip"

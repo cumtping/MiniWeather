@@ -40,6 +40,7 @@ public class SelectCityActivity extends Activity {
 
 		mListView = (ListView) findViewById(R.id.listview);
 		mListView.setOnItemClickListener(new ListViwOnItemClick());
+		findViewById(R.id.more_city).setVisibility(View.INVISIBLE);
 		setupProvinceListView();
 	}
 

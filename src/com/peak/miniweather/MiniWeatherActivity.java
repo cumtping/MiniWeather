@@ -11,10 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.peak.miniweather.utils.MiniWeatherDBHelper;
-import com.peak.miniweather.utils.MiniWeatherTask;
 import com.peak.miniweather.utils.MiniWeatherUtils;
 import com.peak.miniweather.utils.MiniWeatherWorkspaceHelper;
 
@@ -27,14 +27,18 @@ public class MiniWeatherActivity extends Activity {
 	// The saved city list, which is loaded from the SharePreference.
 	ArrayList<String> mSavedCityList = null;
 	MiniWeatherWorkspaceHelper mWorkspaceHandler = null;
+	ImageView mMoreCityImageView = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
 		// init content.
 		initContent();
+		// start service
+		startService(new Intent(this, MiniWeatherService.class));
 	}
 
 	@Override
@@ -81,6 +85,15 @@ public class MiniWeatherActivity extends Activity {
 			MiniWeatherUtils.executeMiniWeatherTask(this, mWorkspaceHandler,
 					currentCity);
 		}
+		// more city image view
+		mMoreCityImageView = (ImageView) findViewById(R.id.more_city);
+		mMoreCityImageView.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+			}
+		});
 	}
 
 	public static final int SELECT_CITY_REQUEST_CODE = 1000;

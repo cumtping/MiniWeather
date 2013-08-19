@@ -35,6 +35,19 @@ public class MiniWeatherUtils {
 
 	public static final String PREF_KEPT_CITY_ITEM_BASE = "kept_city_item_";
 
+	public static final String PREF_AUTO_REFRESH = "auto_refresh";
+
+	public static final String PREF_AUTO_REFRESH_NUM = "auto_refresh_time_num";
+
+	public static final String PREF_AUTO_REFRESH_TIME = "auto_refresh_time";
+
+	public static final String PREF_AUTO_REFRESH_CITY = "auto_refresh_city";
+
+	public static final String INTENT_REFRESH_DATA_CHANGED = "com.peak.miniweather.refresh_data_changed";
+
+	public static void popupMenu(Context c) {
+	}
+
 	public static boolean networkAvailable(Context context) {
 
 		ConnectivityManager connectivity = (ConnectivityManager) context
@@ -478,6 +491,70 @@ public class MiniWeatherUtils {
 					cityList.get(i));
 		}
 
+		editor.apply();
+	}
+
+	public static boolean loadAutoRefreshFromPreference(Context c) {
+		SharedPreferences preferences = c.getSharedPreferences(PREF_NAME,
+				Context.MODE_PRIVATE);
+		return preferences.getBoolean(PREF_AUTO_REFRESH, true);
+	}
+
+	public static void saveAutoRefreshToPreference(Context c,
+			boolean autoRefresh) {
+		SharedPreferences preferences = c.getSharedPreferences(PREF_NAME,
+				Context.MODE_PRIVATE);
+		Editor editor = preferences.edit();
+		editor.putBoolean(PREF_AUTO_REFRESH, autoRefresh);
+		editor.apply();
+	}
+
+	public static ArrayList<String> loadRefreshTimeFromPreference(Context c) {
+		SharedPreferences preferences = c.getSharedPreferences(PREF_NAME,
+				Context.MODE_PRIVATE);
+		int refreshNum = preferences.getInt(PREF_AUTO_REFRESH_NUM, 1);
+		ArrayList<String> refreshTimeList = new ArrayList<String>();
+
+		for (int i = 0; i < refreshNum; i++) {
+			String time = preferences.getString(PREF_AUTO_REFRESH_TIME + i,
+					"8:00");
+			refreshTimeList.add(time);
+		}
+
+		return refreshTimeList;
+	}
+
+	public static void saveRefreshTimeToPreference(Context c,
+			ArrayList<String> refreshTimeList) {
+		if (refreshTimeList == null) {
+			Log.d(TAG, "refreshTimeList = null");
+			return;
+		}
+
+		int refreshNum = refreshTimeList.size();
+		SharedPreferences preferences = c.getSharedPreferences(PREF_NAME,
+				Context.MODE_PRIVATE);
+		Editor editor = preferences.edit();
+		editor.putInt(PREF_AUTO_REFRESH_NUM, refreshNum);
+
+		for (int i = 0; i < refreshNum; i++) {
+			editor.putString(PREF_AUTO_REFRESH_TIME + i, refreshTimeList.get(i));
+		}
+
+		editor.apply();
+	}
+
+	public static String loadRefreshCityFromPreference(Context c) {
+		SharedPreferences preferences = c.getSharedPreferences(PREF_NAME,
+				Context.MODE_PRIVATE);
+		return preferences.getString(PREF_AUTO_REFRESH_CITY, null);
+	}
+
+	public static void saveRefreshCityToPreference(Context c, String city) {
+		SharedPreferences preferences = c.getSharedPreferences(PREF_NAME,
+				Context.MODE_PRIVATE);
+		Editor editor = preferences.edit();
+		editor.putString(PREF_AUTO_REFRESH_CITY, city);
 		editor.apply();
 	}
 
